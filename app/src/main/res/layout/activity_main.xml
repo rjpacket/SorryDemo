@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rjp.sorrydiaodemo.MainActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第一句话: 听着"
+            />
+
+        <EditText
+            android:id="@+id/msg1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第二句话: 就算你是程序员又怎么样"
+            />
+
+        <EditText
+            android:id="@+id/msg2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第三句话: 就算你的代码敲的再好"
+            />
+
+        <EditText
+            android:id="@+id/msg3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第四句话: 我让你重写你就得重写"
+            />
+
+        <EditText
+            android:id="@+id/msg4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第五句话: 毕竟我是产品经理啊"
+            />
+
+        <EditText
+            android:id="@+id/msg5"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第六句话: 产品经理了不起啊"
+            />
+
+        <EditText
+            android:id="@+id/msg6"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第七句话: Sorry,产品经理真的可以为所欲为的"
+            />
+
+        <EditText
+            android:id="@+id/msg7"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第八句话: 以后天天改他的需求"
+            />
+
+        <EditText
+            android:id="@+id/msg8"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第九句话: 哈哈，改的好改的好"
+            />
+
+        <EditText
+            android:id="@+id/msg9"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:text="生成"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:layout_margin="10dp"
+            android:background="#eb1c42"
+            />
+
+    </LinearLayout>
+</ScrollView>
