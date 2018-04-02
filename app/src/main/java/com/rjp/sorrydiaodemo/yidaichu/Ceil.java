@@ -14,14 +14,20 @@ public class Ceil {
     private int centerX;
     private int centerY;
 
+    private boolean isSelected;
+
+    private Ceil nextCeil;
+
+    private String number;
+
     public void setLocation(int left, int right, int top, int bottom){
         this.left = left;
         this.right = right;
         this.top = top;
         this.bottom = bottom;
 
-        centerX = (int) ((left + right) / 2);
-        centerY = (int) ((top + bottom) / 2);
+        setCenterX((left + right) / 2);
+        setCenterY((top + bottom) / 2);
     }
 
     public int getLeft() {
@@ -54,5 +60,45 @@ public class Ceil {
 
     public void setBottom(int bottom) {
         this.bottom = bottom;
+    }
+
+    public int getCenterX() {
+        return centerX;
+    }
+
+    public void setCenterX(int centerX) {
+        this.centerX = centerX;
+    }
+
+    public int getCenterY() {
+        return centerY;
+    }
+
+    public void setCenterY(int centerY) {
+        this.centerY = centerY;
+    }
+
+    public boolean isSelected() {
+        return isSelected;
+    }
+
+    public void setSelected(boolean selected) {
+        isSelected = selected;
+    }
+
+    public Ceil getNextCeil() {
+        return nextCeil;
+    }
+
+    public void setNextCeil(Ceil nextCeil) {
+        this.nextCeil = nextCeil;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
     }
 }
