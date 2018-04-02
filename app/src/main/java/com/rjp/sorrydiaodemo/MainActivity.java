@@ -1,7 +1,7 @@
 package com.rjp.sorrydiaodemo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
         EditText msg7 = (EditText) findViewById(R.id.msg7);
         EditText msg8 = (EditText) findViewById(R.id.msg8);
         EditText msg9 = (EditText) findViewById(R.id.msg9);
-
 
     }
 }

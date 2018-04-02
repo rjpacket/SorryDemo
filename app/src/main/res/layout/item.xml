@@ -5,6 +5,17 @@
               android:layout_height="match_parent"
                 android:clipChildren="false"
     >
+    <ImageView
+        android:id="@+id/iv_add"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:src="@mipmap/ic_launcher_round"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        />
+
     <LinearLayout
         android:id="@+id/ll_label"
         android:layout_width="match_parent"
@@ -43,15 +54,4 @@
                 />
         </LinearLayout>
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/iv_add"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:padding="10dp"
-        android:src="@mipmap/ic_launcher_round"
-        android:visibility="gone"
-        android:layout_alignParentRight="true"
-        android:layout_centerInParent="true"
-        />
 </RelativeLayout>

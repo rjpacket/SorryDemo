@@ -7,15 +7,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.rjp.sorrydiaodemo.SpecialGridViewActivity"
+    android:clipChildren="false"
     >
 
-    <com.rjp.sorrydiaodemo.SpecialGridView
-        android:id="@+id/special_grid_view"
+    <com.rjp.sorrydiaodemo.yidaichu.ChartGroup
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:numColumns="2"
-        android:clipChildren="false"
+        android:layout_height="match_parent"
         >
 
-    </com.rjp.sorrydiaodemo.SpecialGridView>
+    </com.rjp.sorrydiaodemo.yidaichu.ChartGroup>
 </LinearLayout>
