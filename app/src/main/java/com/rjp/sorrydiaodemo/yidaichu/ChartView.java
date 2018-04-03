@@ -4,11 +4,12 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.support.annotation.Px;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.View;
@@ -76,6 +77,7 @@ public class ChartView extends View {
         linkLinePaint.setAntiAlias(true);
         linkLinePaint.setStrokeWidth(4);
         linkLinePaint.setColor(Color.RED);
+        linkLinePaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_OVER));
 
         backgroundPaint = new Paint();
         backgroundPaint.setAntiAlias(true);
@@ -90,6 +92,7 @@ public class ChartView extends View {
         textPaint.setTextAlign(Paint.Align.CENTER);
         textPaint.setColor(Color.WHITE);
         textPaint.setTextSize(32);
+        linkLinePaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_OVER));
 
         // 新增部分 start
         ViewConfiguration viewConfiguration = ViewConfiguration.get(context);
@@ -246,7 +249,6 @@ public class ChartView extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        int count = canvas.saveLayer(0, 0, viewWidth, viewHeight, linePaint, Canvas.ALL_SAVE_FLAG);
         int groupSize = ceilGroups.size();
         for (int i = 0; i < groupSize; i++) {
             CeilGroup ceilGroup = ceilGroups.get(i);
@@ -254,19 +256,36 @@ public class ChartView extends View {
             int ceilSize = ceils.size();
             for (int j = 0; j < ceilSize; j++) {
                 Ceil ceil = ceils.get(j);
-                drawCeilLinkLine(canvas, ceil);
                 if (isCeilVisiable(ceil)) {
                     drawCeilTopLine(canvas, ceil);
                     drawCeilLeftLine(canvas, ceil);
                     drawCeilBackground(canvas, ceil);
-                    drawCeilSelected(canvas, ceil);
-                    canvas.restoreToCount(count);
-                    drawCeilText(canvas, ceil);
-                    canvas.restore();
                 }
             }
         }
 
+        for (int i = 0; i < groupSize; i++) {
+            CeilGroup ceilGroup = ceilGroups.get(i);
+            List<Ceil> ceils = ceilGroup.getCeils();
+            int ceilSize = ceils.size();
+            for (int j = 0; j < ceilSize; j++) {
+                Ceil ceil = ceils.get(j);
+                drawCeilLinkLine(canvas, ceil);
+            }
+        }
+
+        for (int i = 0; i < groupSize; i++) {
+            CeilGroup ceilGroup = ceilGroups.get(i);
+            List<Ceil> ceils = ceilGroup.getCeils();
+            int ceilSize = ceils.size();
+            for (int j = 0; j < ceilSize; j++) {
+                Ceil ceil = ceils.get(j);
+                if (isCeilVisiable(ceil)) {
+                    drawCeilSelected(canvas, ceil);
+                    drawCeilText(canvas, ceil);
+                }
+            }
+        }
     }
 
     /**
