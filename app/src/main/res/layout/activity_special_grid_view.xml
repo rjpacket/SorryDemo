@@ -10,10 +10,10 @@
     android:clipChildren="false"
     >
 
-    <com.rjp.sorrydiaodemo.yidaichu.ChartGroup
+    <com.rjp.sorrydiaodemo.yidaichu.ChartView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
 
-    </com.rjp.sorrydiaodemo.yidaichu.ChartGroup>
+    </com.rjp.sorrydiaodemo.yidaichu.ChartView>
 </LinearLayout>

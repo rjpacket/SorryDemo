@@ -2,13 +2,12 @@ package com.rjp.sorrydiaodemo;
 
 import android.content.Context;
 import android.os.Bundle;
-
-import com.rjp.sorrydiaodemo.swipeback.SwipeBackActivity;
+import android.support.v4.app.FragmentActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SpecialGridViewActivity extends SwipeBackActivity {
+public class SpecialGridViewActivity extends FragmentActivity {
 
     private List<ItemModel> titles = new ArrayList<>();
     private Context mContext;

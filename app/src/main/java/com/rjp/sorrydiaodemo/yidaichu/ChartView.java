@@ -1,11 +1,10 @@
 package com.rjp.sorrydiaodemo.yidaichu;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.support.annotation.Px;
@@ -15,6 +14,8 @@ import android.view.VelocityTracker;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.widget.Scroller;
+
+import com.rjp.sorrydiaodemo.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +39,6 @@ public class ChartView extends View {
     private int ceilWidth = 100;
     private int ceilHeight = 100;
     private int screenWidth;
-    private int screenHeight;
     private int preX;
     private int preY;
     private Paint linePaint;
@@ -55,6 +55,17 @@ public class ChartView extends View {
     private int mMinimumVelocity;
     private int mMaximumVelocity;
     private VelocityTracker mVelocityTracker;
+    private int columns;
+    private float numberTextSize;
+    private int ballColor;
+    private int numberNormalColor;
+    private int numberSelectedColor;
+    private int linkLineColor;
+    private int backgroundColor;
+    private int strokeColor;
+    private float linkLineWidth;
+    private float tempCeilWidth;
+    private float tempCeilHeight;
 
     public ChartView(Context context) {
         this(context, null);
@@ -62,37 +73,56 @@ public class ChartView extends View {
 
     public ChartView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        initView(context);
+        initView(context, attrs);
     }
 
-    private void initView(Context context) {
+    private void initView(Context context, AttributeSet attrs) {
+        if(attrs != null) {
+            TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.ChartView);
+            mode = array.getInt(R.styleable.ChartView_mode, MODE_APPEND);
+            columns = array.getInt(R.styleable.ChartView_columns, 8);
+            tempCeilWidth = array.getDimension(R.styleable.ChartView_ceil_width, 100);
+            tempCeilHeight = array.getDimension(R.styleable.ChartView_ceil_height, 100);
+            numberTextSize = array.getDimension(R.styleable.ChartView_number_size, 32);
+            linkLineWidth = array.getDimension(R.styleable.ChartView_link_line_width, 4);
+            ballColor = array.getColor(R.styleable.ChartView_ball_color, Color.RED);
+            numberNormalColor = array.getColor(R.styleable.ChartView_number_normal_color, Color.BLACK);
+            numberSelectedColor = array.getColor(R.styleable.ChartView_number_selected_color, Color.WHITE);
+            linkLineColor = array.getColor(R.styleable.ChartView_link_line_color, Color.RED);
+            strokeColor = array.getColor(R.styleable.ChartView_stroke_color, Color.BLACK);
+            backgroundColor = array.getColor(R.styleable.ChartView_background_color, Color.GRAY);
+        }
+
         screenWidth = context.getResources().getDisplayMetrics().widthPixels;
-        screenHeight = context.getResources().getDisplayMetrics().heightPixels;
+        if(mode == MODE_EQUAL) {
+            ceilWidth = ceilHeight = screenWidth / columns;
+        }else if(mode == MODE_APPEND){
+            ceilWidth = (int) tempCeilWidth;
+            ceilHeight = (int) tempCeilHeight;
+        }
 
         linePaint = new Paint();
         linePaint.setAntiAlias(true);
-        linePaint.setColor(Color.BLACK);
+        linePaint.setColor(strokeColor);
 
         linkLinePaint = new Paint();
         linkLinePaint.setAntiAlias(true);
-        linkLinePaint.setStrokeWidth(4);
-        linkLinePaint.setColor(Color.RED);
-        linkLinePaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_OVER));
+        linkLinePaint.setStrokeWidth(linkLineWidth);
+        linkLinePaint.setColor(linkLineColor);
 
         backgroundPaint = new Paint();
         backgroundPaint.setAntiAlias(true);
-        backgroundPaint.setColor(Color.GRAY);
+        backgroundPaint.setColor(backgroundColor);
 
         selectedPaint = new Paint();
         selectedPaint.setAntiAlias(true);
-        selectedPaint.setColor(Color.RED);
+        selectedPaint.setColor(ballColor);
 
         textPaint = new Paint();
         textPaint.setAntiAlias(true);
         textPaint.setTextAlign(Paint.Align.CENTER);
-        textPaint.setColor(Color.WHITE);
-        textPaint.setTextSize(32);
-        linkLinePaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_OVER));
+        textPaint.setColor(numberNormalColor);
+        textPaint.setTextSize(numberTextSize);
 
         // 新增部分 start
         ViewConfiguration viewConfiguration = ViewConfiguration.get(context);
@@ -305,7 +335,7 @@ public class ChartView extends View {
      * @param ceil
      */
     private void drawCeilText(Canvas canvas, Ceil ceil) {
-        textPaint.setColor(ceil.isSelected() ? Color.WHITE : Color.BLACK);
+        textPaint.setColor(ceil.isSelected() ? numberSelectedColor : numberNormalColor);
         canvas.drawText(ceil.getNumber(), ceil.getCenterX(), ceil.getCenterY(), textPaint);
     }
 
