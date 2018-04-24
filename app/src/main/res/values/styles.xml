@@ -8,4 +8,101 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <style name="CheckBoxBlackBlock">
+        <item name="android:textSize">10.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/pink_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/selector_checkbox_black_block</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">30.0dip</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="CheckBoxBlackBlockVertical">
+        <item name="android:textSize">10.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/pink_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/selector_checkbox_black_block</item>
+        <item name="android:layout_width">30.0dip</item>
+        <item name="android:layout_height">0.0dip</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="CheckBoxBlackBlockWelfare">
+        <item name="android:textSize">10.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/pink_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/selector_checkbox_black_block</item>
+        <item name="android:layout_width">30.0dip</item>
+        <item name="android:layout_height">30.0dip</item>
+        <item name="android:button">@null</item>
+    </style>
+    <style name="LinePinkHorizon">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@color/pink_text</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">1.0px</item>
+    </style>
+    <style name="LinePinkVertical">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@color/pink_text</item>
+        <item name="android:layout_width">1.0px</item>
+        <item name="android:layout_height">30.0dip</item>
+    </style>
+    <style name="LinePinkVerticalVirtual">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/line_vertical_virtual</item>
+        <item name="android:layout_width">50.0dip</item>
+        <item name="android:layout_height">30.0dip</item>
+        <item name="android:layout_marginLeft">-25.0dip</item>
+        <item name="android:layout_marginRight">-25.0dip</item>
+        <item name="android:layerType">software</item>
+    </style>
+    <style name="LineWhiteBlockHorizon">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">#ffffffff</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">1.0px</item>
+    </style>
+
+    <style name="TextPinkBlock">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/pink_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@color/pink_background</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">30.0dip</item>
+    </style>
+    <style name="TextWhiteBlock">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/pink_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">30.0dip</item>
+    </style>
+    <style name="TextWhiteBlockVertical">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/pink_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">30.0dip</item>
+        <item name="android:layout_height">0.0dip</item>
+    </style>
+
 </resources>

@@ -1,3 +1,357 @@
 <resources>
     <string name="app_name">SorryDiaoDemo</string>
+    <string name="abc_action_bar_home_description">Navigate home</string>
+    <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
+    <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
+    <string name="abc_action_bar_up_description">Navigate up</string>
+    <string name="abc_action_menu_overflow_description">More options</string>
+    <string name="abc_action_mode_done">Done</string>
+    <string name="abc_activity_chooser_view_see_all">See all</string>
+    <string name="abc_activitychooserview_choose_application">Choose an app</string>
+    <string name="abc_capital_off">OFF</string>
+    <string name="abc_capital_on">ON</string>
+    <string name="abc_search_hint">Search…</string>
+    <string name="abc_searchview_description_clear">Clear query</string>
+    <string name="abc_searchview_description_query">Search query</string>
+    <string name="abc_searchview_description_search">Search</string>
+    <string name="abc_searchview_description_submit">Submit query</string>
+    <string name="abc_searchview_description_voice">Voice search</string>
+    <string name="abc_shareactionprovider_share_with">Share with</string>
+    <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
+    <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="appbar_scrolling_view_behavior">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="bottom_sheet_behavior">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="btn_ble_auto_off">关闭蓝牙自动连接</string>
+    <string name="btn_ble_auto_on">开启蓝牙自动连接</string>
+    <string name="btn_ble_check">检查设备</string>
+    <string name="btn_ble_close">关闭蓝牙</string>
+    <string name="btn_ble_disconnect">断开连接</string>
+    <string name="btn_ble_matched">查看配对</string>
+    <string name="btn_ble_open">打开蓝牙</string>
+    <string name="btn_ble_prt_img">打印图片</string>
+    <string name="btn_ble_prt_word">打印文字</string>
+    <string name="btn_ble_scan">扫描设备</string>
+    <string name="character_counter_pattern">%1$d / %2$d</string>
+    <string name="large_text">"Material is the metaphor.
+
+ A material metaphor is the unifying theory of a rationalized space and a system of motion. The material is grounded in tactile reality, inspired by the study of paper and ink, yet  technologically advanced and open to imagination and magic.
+ Surfaces and edges of the material provide visual cues that are grounded in reality. The  use of familiar tactile attributes helps users quickly understand affordances. Yet the  flexibility of the material creates new affordances that supercede those in the physical  world, without breaking the rules of physics.
+ The fundamentals of light, surface, and movement are key to conveying how objects move,  interact, and exist in space and in relation to each other. Realistic lighting shows  seams, divides space, and indicates moving parts.
+
+ Bold, graphic, intentional.
+
+ The foundational elements of print based design typography, grids, space, scale, color,  and use of imagery guide visual treatments. These elements do far more than please the  eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge  imagery, large scale typography, and intentional white space create a bold and graphic  interface that immerse the user in the experience.
+ An emphasis on user actions makes core functionality immediately apparent and provides  waypoints for the user.
+
+ Motion provides meaning.
+
+ Motion respects and reinforces the user as the prime mover. Primary user actions are  inflection points that initiate motion, transforming the whole design.
+ All action takes place in a single environment. Objects are presented to the user without  breaking the continuity of experience even as they transform and reorganize.
+ Motion is meaningful and appropriate, serving to focus attention and maintain continuity.  Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.
+
+ 3D world.
+
+ The material environment is a 3D space, which means all objects have x, y, and z  dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the  positive z-axis extending towards the viewer. Every sheet of material occupies a single  position along the z-axis and has a standard 1dp thickness.
+ On the web, the z-axis is used for layering and not for perspective. The 3D world is  emulated by manipulating the y-axis.
+
+ Light and shadow.
+
+ Within the material environment, virtual lights illuminate the scene. Key lights create  directional shadows, while ambient light creates soft shadows from all angles.
+ Shadows in the material environment are cast by these two light sources. In Android  development, shadows occur when light sources are blocked by sheets of material at  various positions along the z-axis. On the web, shadows are depicted by manipulating the  y-axis only. The following example shows the card with a height of 6dp.
+
+ Resting elevation.
+
+ All material objects, regardless of size, have a resting elevation, or default elevation  that does not change. If an object changes elevation, it should return to its resting  elevation as soon as possible.
+
+ Component elevations.
+
+ The resting elevation for a component type is consistent across apps (e.g., FAB elevation  does not vary from 6dp in one app to 16dp in another app).
+ Components may have different resting elevations across platforms, depending on the depth  of the environment (e.g., TV has a greater depth than mobile or desktop).
+
+ Responsive elevation and dynamic elevation offsets.
+
+ Some component types have responsive elevation, meaning they change elevation in response  to user input (e.g., normal, focused, and pressed) or system events. These elevation  changes are consistently implemented using dynamic elevation offsets.
+ Dynamic elevation offsets are the goal elevation that a component moves towards, relative  to the component’s resting state. They ensure that elevation changes are consistent  across actions and component types. For example, all components that lift on press have  the same elevation change relative to their resting elevation.
+ Once the input event is completed or cancelled, the component will return to its resting  elevation.
+
+ Avoiding elevation interference.
+
+ Components with responsive elevations may encounter other components as they move between  their resting elevations and dynamic elevation offsets. Because material cannot pass  through other material, components avoid interfering with one another any number of ways,  whether on a per component basis or using the entire app layout.
+ On a component level, components can move or be removed before they cause interference.  For example, a floating action button (FAB) can disappear or move off screen before a  user picks up a card, or it can move if a snackbar appears.
+ On the layout level, design your app layout to minimize opportunities for interference.  For example, position the FAB to one side of stream of a cards so the FAB won’t interfere  when a user tries to pick up one of cards.
+
+"</string>
+    <string name="register_fail">Register push fail.</string>
+    <string name="register_success">Register push success.</string>
+    <string name="set_accept_time_fail">Set accept time fail for %1$s.</string>
+    <string name="set_accept_time_success">Set accept time %1$s - %2$s success.</string>
+    <string name="set_account_fail">Set account fail for %1$s.</string>
+    <string name="set_account_success">Set account \"%1$s\" success.</string>
+    <string name="set_alias_fail">Set alias fail for %1$s.</string>
+    <string name="set_alias_success">Set alias \"%1$s\" success.</string>
+    <string name="str_ble_auto_off">已关闭蓝牙自动连接</string>
+    <string name="str_ble_auto_on">已开启蓝牙自动连接</string>
+    <string name="str_block_back">后   区</string>
+    <string name="str_block_pre">前                  区</string>
+    <string name="str_bracket_space">[       ]</string>
+    <string name="str_choose_14">[选14]</string>
+    <string name="str_choose_9">[选9]</string>
+    <string name="str_choose_add">[追加]</string>
+    <string name="str_choose_di_1">第1投注栏</string>
+    <string name="str_choose_di_2">第2投注栏</string>
+    <string name="str_choose_di_3">第3投注栏</string>
+    <string name="str_choose_drop">[作废]</string>
+    <string name="str_choose_group">[组选]</string>
+    <string name="str_choose_muti">[复式]</string>
+    <string name="str_choose_random">[机选]</string>
+    <string name="str_choose_reply">[复选]</string>
+    <string name="str_choose_usual">[通选]</string>
+    <string name="str_connected">已连接</string>
+    <string name="str_connecting">正在连接</string>
+    <string name="str_devecehasblue">有蓝牙设备!</string>
+    <string name="str_disconnected">没有连接</string>
+    <string name="str_draw_draw">[平平]</string>
+    <string name="str_draw_game">[  平  ]</string>
+    <string name="str_draw_loss">[平负]</string>
+    <string name="str_draw_win">[平胜]</string>
+    <string name="str_faileconnect">连接失败!</string>
+    <string name="str_football_match">竞彩足球</string>
+    <string name="str_fri">[周五]</string>
+    <string name="str_game_name">游戏名称</string>
+    <string name="str_half_audience">半全场</string>
+    <string name="str_hasnodevice">没有蓝牙设备!</string>
+    <string name="str_lose">丢失连接!</string>
+    <string name="str_loss">[  负  ]</string>
+    <string name="str_loss_draw">[负平]</string>
+    <string name="str_loss_loss">[负负]</string>
+    <string name="str_loss_win">[负胜]</string>
+    <string name="str_mission_complete_type">过关方式</string>
+    <string name="str_mission_custom">一般过关</string>
+    <string name="str_mission_mixture">混合过关</string>
+    <string name="str_mission_single">单场</string>
+    <string name="str_mission_type">过关类型</string>
+    <string name="str_mon">[周一]</string>
+    <string name="str_nomatched">没有匹配设备!</string>
+    <string name="str_num_0">[  0   ]</string>
+    <string name="str_num_0.0">[0:0]</string>
+    <string name="str_num_0.1">[0:1]</string>
+    <string name="str_num_0.2">[0:2]</string>
+    <string name="str_num_0.3">[0:3]</string>
+    <string name="str_num_0.4">[0:4]</string>
+    <string name="str_num_0.5">[0:5]</string>
+    <string name="str_num_1">[  1   ]</string>
+    <string name="str_num_1.0">[1:0]</string>
+    <string name="str_num_1.1">[1:1]</string>
+    <string name="str_num_1.2">[1:2]</string>
+    <string name="str_num_1.3">[1:3]</string>
+    <string name="str_num_1.4">[1:4]</string>
+    <string name="str_num_1.5">[1:5]</string>
+    <string name="str_num_10">[ 10  ]</string>
+    <string name="str_num_100">[100 ]</string>
+    <string name="str_num_11">[ 11  ]</string>
+    <string name="str_num_12">[ 12  ]</string>
+    <string name="str_num_13">[ 13  ]</string>
+    <string name="str_num_14">[ 14  ]</string>
+    <string name="str_num_15">[ 15  ]</string>
+    <string name="str_num_16">[ 16  ]</string>
+    <string name="str_num_17">[ 17  ]</string>
+    <string name="str_num_18">[ 18  ]</string>
+    <string name="str_num_19">[ 19  ]</string>
+    <string name="str_num_2">[  2   ]</string>
+    <string name="str_num_2.0">[2:0]</string>
+    <string name="str_num_2.1">[2:1]</string>
+    <string name="str_num_2.2">[2:2]</string>
+    <string name="str_num_2.3">[2:3]</string>
+    <string name="str_num_2.4">[2:4]</string>
+    <string name="str_num_2.5">[2:5]</string>
+    <string name="str_num_20">[ 20  ]</string>
+    <string name="str_num_200">[200 ]</string>
+    <string name="str_num_21">[ 21  ]</string>
+    <string name="str_num_22">[ 22  ]</string>
+    <string name="str_num_23">[ 23  ]</string>
+    <string name="str_num_24">[ 24  ]</string>
+    <string name="str_num_25">[ 25  ]</string>
+    <string name="str_num_26">[ 26  ]</string>
+    <string name="str_num_27">[ 27  ]</string>
+    <string name="str_num_28">[ 28  ]</string>
+    <string name="str_num_29">[ 29  ]</string>
+    <string name="str_num_2x1">[2x1]</string>
+    <string name="str_num_3">[  3   ]</string>
+    <string name="str_num_3.0">[3:0]</string>
+    <string name="str_num_3.1">[3:1]</string>
+    <string name="str_num_3.2">[3:2]</string>
+    <string name="str_num_3.3">[3:3]</string>
+    <string name="str_num_3.4">[3:4]</string>
+    <string name="str_num_3.5">[3:5]</string>
+    <string name="str_num_30">[ 30  ]</string>
+    <string name="str_num_31">[ 31  ]</string>
+    <string name="str_num_32">[ 32  ]</string>
+    <string name="str_num_33">[ 33  ]</string>
+    <string name="str_num_3x1">[3x1]</string>
+    <string name="str_num_3x3">[3x3]</string>
+    <string name="str_num_3x4">[3x4]</string>
+    <string name="str_num_4">[  4   ]</string>
+    <string name="str_num_4.0">[4:0]</string>
+    <string name="str_num_4.1">[4:1]</string>
+    <string name="str_num_4.2">[4:2]</string>
+    <string name="str_num_4.3">[4:3]</string>
+    <string name="str_num_4.4">[4:4]</string>
+    <string name="str_num_4.5">[4:5]</string>
+    <string name="str_num_40">[ 40  ]</string>
+    <string name="str_num_400">[400 ]</string>
+    <string name="str_num_4x1">[4x1]</string>
+    <string name="str_num_4x11">[4x11]</string>
+    <string name="str_num_4x4">[4x4]</string>
+    <string name="str_num_4x5">[4x5]</string>
+    <string name="str_num_4x6">[4x6]</string>
+    <string name="str_num_5">[  5   ]</string>
+    <string name="str_num_5.0">[5:0]</string>
+    <string name="str_num_5.1">[5:1]</string>
+    <string name="str_num_5.2">[5:2]</string>
+    <string name="str_num_5.3">[5:3]</string>
+    <string name="str_num_5.4">[5:4]</string>
+    <string name="str_num_5.5">[5:5]</string>
+    <string name="str_num_50">[ 50  ]</string>
+    <string name="str_num_500">[500 ]</string>
+    <string name="str_num_5x1">[5x1]</string>
+    <string name="str_num_5x10">[5x10]</string>
+    <string name="str_num_5x16">[5x16]</string>
+    <string name="str_num_5x20">[5x20]</string>
+    <string name="str_num_5x26">[5x26]</string>
+    <string name="str_num_5x5">[5x5]</string>
+    <string name="str_num_5x6">[5x6]</string>
+    <string name="str_num_6">[  6   ]</string>
+    <string name="str_num_6x1">[6x1]</string>
+    <string name="str_num_6x15">[6x15]</string>
+    <string name="str_num_6x20">[6x20]</string>
+    <string name="str_num_6x22">[6x22]</string>
+    <string name="str_num_6x35">[6x35]</string>
+    <string name="str_num_6x42">[6x42]</string>
+    <string name="str_num_6x50">[6x50]</string>
+    <string name="str_num_6x57">[6x57]</string>
+    <string name="str_num_6x6">[6x6]</string>
+    <string name="str_num_6x7">[6x7]</string>
+    <string name="str_num_7">[  7   ]</string>
+    <string name="str_num_7plus">[ 7+  ]</string>
+    <string name="str_num_7x1">[7x1]</string>
+    <string name="str_num_7x120">[7x120]</string>
+    <string name="str_num_7x21">[7x21]</string>
+    <string name="str_num_7x35">[7x35]</string>
+    <string name="str_num_7x7">[7x7]</string>
+    <string name="str_num_7x8">[7x8]</string>
+    <string name="str_num_8">[  8   ]</string>
+    <string name="str_num_8x1">[8x1]</string>
+    <string name="str_num_8x247">[8x247]</string>
+    <string name="str_num_8x28">[8x28]</string>
+    <string name="str_num_8x56">[8x56]</string>
+    <string name="str_num_8x70">[8x70]</string>
+    <string name="str_num_8x8">[8x8]</string>
+    <string name="str_num_8x9">[8x9]</string>
+    <string name="str_num_9">[  9   ]</string>
+    <string name="str_num_rate">倍数</string>
+    <string name="str_number_01">[01]</string>
+    <string name="str_number_02">[02]</string>
+    <string name="str_number_03">[03]</string>
+    <string name="str_number_04">[04]</string>
+    <string name="str_number_05">[05]</string>
+    <string name="str_number_06">[06]</string>
+    <string name="str_number_07">[07]</string>
+    <string name="str_number_08">[08]</string>
+    <string name="str_number_09">[09]</string>
+    <string name="str_number_10">[10]</string>
+    <string name="str_number_11">[11]</string>
+    <string name="str_number_12">[12]</string>
+    <string name="str_number_13">[13]</string>
+    <string name="str_number_14">[14]</string>
+    <string name="str_number_15">[15]</string>
+    <string name="str_number_16">[16]</string>
+    <string name="str_number_17">[17]</string>
+    <string name="str_number_18">[18]</string>
+    <string name="str_number_19">[19]</string>
+    <string name="str_number_20">[20]</string>
+    <string name="str_number_21">[21]</string>
+    <string name="str_number_22">[22]</string>
+    <string name="str_number_23">[23]</string>
+    <string name="str_number_24">[24]</string>
+    <string name="str_number_25">[25]</string>
+    <string name="str_number_26">[26]</string>
+    <string name="str_number_27">[27]</string>
+    <string name="str_number_28">[28]</string>
+    <string name="str_number_29">[29]</string>
+    <string name="str_number_30">[30]</string>
+    <string name="str_number_31">[31]</string>
+    <string name="str_number_32">[32]</string>
+    <string name="str_number_33">[33]</string>
+    <string name="str_number_34">[34]</string>
+    <string name="str_number_35">[35]</string>
+    <string name="str_other_draw">[平其它]</string>
+    <string name="str_other_loss">[负其它]</string>
+    <string name="str_other_win">[胜其它]</string>
+    <string name="str_play_choose">玩法选择</string>
+    <string name="str_play_main">主玩法</string>
+    <string name="str_play_more_double">加倍投注</string>
+    <string name="str_play_other">附加玩法</string>
+    <string name="str_question_option">竞猜选项</string>
+    <string name="str_race_number">赛事编号</string>
+    <string name="str_rate_ball">让球</string>
+    <string name="str_rateball_win_draw_loss">"让球
+胜平负"</string>
+    <string name="str_sat">[周六]</string>
+    <string name="str_scanover">扫描完毕!</string>
+    <string name="str_score">比 分</string>
+    <string name="str_state_1">1</string>
+    <string name="str_state_10">10</string>
+    <string name="str_state_11">11</string>
+    <string name="str_state_12">12</string>
+    <string name="str_state_13">13</string>
+    <string name="str_state_14">14</string>
+    <string name="str_state_2">2</string>
+    <string name="str_state_3">3</string>
+    <string name="str_state_4">4</string>
+    <string name="str_state_5">5</string>
+    <string name="str_state_6">6</string>
+    <string name="str_state_7">7</string>
+    <string name="str_state_8">8</string>
+    <string name="str_state_9">9</string>
+    <string name="str_state_count">场次</string>
+    <string name="str_succonnect">连接成功!</string>
+    <string name="str_sun">[周日]</string>
+    <string name="str_thur">[周四]</string>
+    <string name="str_total_goal">总进球</string>
+    <string name="str_tues">[周二]</string>
+    <string name="str_unconnected">未连接!</string>
+    <string name="str_week_drop">[作废]</string>
+    <string name="str_wes">[周三]</string>
+    <string name="str_win">[  胜  ]</string>
+    <string name="str_win_draw">[胜平]</string>
+    <string name="str_win_draw_loss">胜平负</string>
+    <string name="str_win_loss">[胜负]</string>
+    <string name="str_win_win">[胜胜]</string>
+    <string name="str_word_bei">倍</string>
+    <string name="str_word_di">第</string>
+    <string name="str_word_duo">多</string>
+    <string name="str_word_er">二</string>
+    <string name="str_word_fu">复</string>
+    <string name="str_word_lan">栏</string>
+    <string name="str_word_qi">期</string>
+    <string name="str_word_san">三</string>
+    <string name="str_word_shi">式</string>
+    <string name="str_word_si">四</string>
+    <string name="str_word_tou">投</string>
+    <string name="str_word_wu">五</string>
+    <string name="str_word_yi">一</string>
+    <string name="str_word_zhu">注</string>
+    <string name="str_words_beishu">倍数</string>
+    <string name="str_words_diyizhu">第1注</string>
+    <string name="str_words_gewei">个位</string>
+    <string name="str_words_shiwei">十位</string>
+    <string name="subscribe_topic_fail">Subscribe topic fail for %1$s.</string>
+    <string name="subscribe_topic_success">Subscribe topic \"%1$s\" success.</string>
+    <string name="unset_account_fail">Unset account fail for %1$s.</string>
+    <string name="unset_account_success">Unset account \"%1$s\" success.</string>
+    <string name="unset_alias_fail">Unset alias fail for %1$s.</string>
+    <string name="unset_alias_success">Unset alias \"%1$s\" success.</string>
+    <string name="unsubscribe_topic_fail">Unsubscribe topic fail for %1$s.</string>
+    <string name="unsubscribe_topic_success">Unsubscribe topic \"%1$s\" success.</string>
 </resources>

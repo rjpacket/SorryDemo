@@ -7,13 +7,33 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.rjp.sorrydiaodemo.SpecialGridViewActivity"
-    android:clipChildren="false"
     >
 
-    <com.rjp.sorrydiaodemo.yidaichu.ChartView
+    <ScrollView
+        android:id="@+id/scroll_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="800dp"
+                />
 
-    </com.rjp.sorrydiaodemo.yidaichu.ChartView>
+            <com.rjp.sorrydiaodemo.qq_special_view.BeautView
+                android:id="@+id/beaut_view"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="800dp"
+                />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
