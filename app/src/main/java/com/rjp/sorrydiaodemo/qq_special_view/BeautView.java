@@ -59,7 +59,7 @@ public class BeautView extends View {
         bottomPaint = new Paint();
 
         //src_over 模式
-        mXfermode = new PorterDuffXfermode(PorterDuff.Mode.SRC_OVER);
+        mXfermode = new PorterDuffXfermode(PorterDuff.Mode.SRC_OUT);
     }
 
     @Override
@@ -69,8 +69,8 @@ public class BeautView extends View {
         setMeasuredDimension(width, height);
 
         //首先缩放bitmap，完全填满View的空间
-        topBitmap = zoomBitmap(topBitmap, width, height);
-        bottomBitmap = zoomBitmap(bottomBitmap, width, height);
+//        topBitmap = zoomBitmap(topBitmap, width, height);
+//        bottomBitmap = zoomBitmap(bottomBitmap, width, height);
         //填充画笔
         setPaintShader(topBitmap, topPaint);
         setPaintShader(bottomBitmap, bottomPaint);

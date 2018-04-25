@@ -9,31 +9,17 @@
     tools:context="com.rjp.sorrydiaodemo.SpecialGridViewActivity"
     >
 
-    <ScrollView
-        android:id="@+id/scroll_view"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btn_link"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="800dp"
-                />
+        android:text="连接服务"
+        />
 
-            <com.rjp.sorrydiaodemo.qq_special_view.BeautView
-                android:id="@+id/beaut_view"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="800dp"
-                />
-        </LinearLayout>
-    </ScrollView>
+    <Button
+        android:id="@+id/btn_jisuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="计算"
+        />
 </LinearLayout>
