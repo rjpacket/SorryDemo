@@ -14,6 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         >
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="Easy example which makes the status bar clock red and adds a smiley" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="54" />
+
         <activity android:name=".MainActivity">
         </activity>
         <activity android:name=".SpecialGridViewActivity">
@@ -32,9 +42,12 @@
             android:exported="true"
             >
             <intent-filter>
-                <action android:name="android.intent.action.aidl.computeservice" />
+                <action android:name="android.intent.action.aidl.computeservice"/>
             </intent-filter>
         </service>
+
+        <activity android:name=".xposed.WechatStepActivity">
+        </activity>
     </application>
 
 </manifest>

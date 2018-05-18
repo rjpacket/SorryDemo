@@ -4,22 +4,19 @@ import android.annotation.TargetApi;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.ServiceConnection;
+import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
-import android.os.RemoteException;
 import android.support.v4.app.FragmentActivity;
 import android.util.DisplayMetrics;
-import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.rjp.sorrydiaodemo.bookaidl.Book;
-import com.rjp.sorrydiaodemo.bookaidl.BookInterface;
+import com.rjp.sorrydiaodemo.blur.BlurUtils;
 import com.rjp.sorrydiaodemo.bookaidl.BookServiceManager;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class SpecialGridViewActivity extends FragmentActivity {
 
@@ -41,35 +38,8 @@ public class SpecialGridViewActivity extends FragmentActivity {
         bookServiceManager = BookServiceManager.getInstance(mContext);
         bookServiceManager.connectService(SERVER_ACTION, SERVER_PACKAGE_NAME);
 
-        final Button btnSum = (Button) findViewById(R.id.btn_jisuan);
-        findViewById(R.id.btn_link).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                BookInterface myService = bookServiceManager.getMyService();
-                try {
-                    if(myService != null) {
-                        List<Book> books = myService.getBooks();
-                        Book book = books.get(0);
-                        btnSum.setText(book.getName());
-                    }
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-
-        btnSum.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    int sum = mRemote.compute(1, 2);
-                    btnSum.setText(String.valueOf(sum));
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
+        ImageView imageView = (ImageView) findViewById(R.id.image);
+        imageView.setImageBitmap(BlurUtils.blurBitmap(BitmapFactory.decodeResource(getResources(), R.mipmap.top_pic), 25.0f, this));
     }
 
     @Override
